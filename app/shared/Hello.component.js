@@ -3,7 +3,7 @@ import React from 'react';
 //import HelloUI from '../web/components/HelloUI.component';
 
 
-let HelloUI = require(`../${mode}/components/HelloUI.component`);
+let HelloUI = require(`../native/components/HelloUI.component`);
 
 console.log(HelloUI);
 
@@ -16,9 +16,8 @@ export default class HelloComponent extends React.Component{
     }
     render(){
         return (
-        <div>
             <HelloUI changeValue={this.changeState.bind(this)} inputValue = {this.state.someVar}/>
-        </div>);
+        );
     }
 
     changeState(e){
