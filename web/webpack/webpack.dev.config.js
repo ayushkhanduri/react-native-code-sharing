@@ -17,7 +17,10 @@ let webpackDevConfig = {
         publicPath: '/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            mode: JSON.stringify('web')
+        })
     ],
     module:{
         loaders: [

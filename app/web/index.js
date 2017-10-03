@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloUI from './components/HelloUI.component';
+import HelloComponent from '../shared/Hello.component';
 
-ReactDOM.render(<HelloUI/>,document.getElementById('app'));
+
+ReactDOM.render(<HelloComponent/>,document.getElementById('app'));
 
 if(module.hot){
-    module.hot.accept('./components/HelloUI.component.js', () => {
-		const HelloUI = require('./components/HelloUI.component.js').default;
+    module.hot.accept('../shared/Hello.component.js', () => {
+		const HelloComponent = require('../shared/Hello.component.js').default;
 		console.log('>>>>>> Router Updated !! <<<<<<<')
 		ReactDOM.render(
-			<HelloUI/>,
+			<HelloComponent/>,
 			document.getElementById('app')
 		);
 	});

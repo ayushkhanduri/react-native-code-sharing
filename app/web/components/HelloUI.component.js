@@ -1,9 +1,11 @@
 import React from 'react';
 
-const HelloUI = () => (
+const HelloUI = ({changeValue,inputValue}) => (
+
     <div>
-        balle balle
+        <input type="text" value= {inputValue} onChange={changeValue}/>
+        {inputValue}
     </div>
 );
 
-export default HelloUI;
+module.exports=  HelloUI;
