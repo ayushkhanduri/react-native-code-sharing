@@ -12,4 +12,4 @@ const HelloUI = ({inputValue,changeValue}) => (
     </View>
 );
 
-module.exports = HelloUI;
+export default HelloUI;
