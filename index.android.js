@@ -3,17 +3,13 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
 import React, { Component } from 'react';
 import {
   View,
-  AppRegistry,
-  Text
+  AppRegistry
 } from 'react-native';
 
-global.mode= "native";
-console.log(mode);
-
+console.log("AsdASDASD");
 import HelloUI from './app/shared/Hello.component';
 
 export default class AwesomeProject extends Component {

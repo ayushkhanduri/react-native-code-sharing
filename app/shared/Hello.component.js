@@ -1,28 +1,28 @@
 import React from 'react';
 
-//import HelloUI from '../web/components/HelloUI.component';
+let RequireWrapper = require('./wrappers/RequireWrapper').default;
 
-
-let HelloUI = require(`../native/components/HelloUI.component`);
-
-console.log(HelloUI);
+let HelloUI = RequireWrapper('HelloUI');
+//let HelloUI = require(Re);
 
 export default class HelloComponent extends React.Component{
     constructor(){
         super();
         this.state = {
-            someVar: "Hello World !"
+            someVar: "Hello dsdrld!"
         };
     }
     render(){
         return (
-            <HelloUI changeValue={this.changeState.bind(this)} inputValue = {this.state.someVar}/>
+            <HelloUI inputValue = {this.state.someVar} changeValue = {this.valueChange.bind(this)}/>
         );
     }
 
-    changeState(e){
+    valueChange(e){
+        console.log(global.mode);
         this.setState({
-            someVar:e.target.value 
+            someVar: e
         })
+
     }
 }

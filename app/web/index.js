@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import HelloComponent from '../shared/Hello.component';
 
-
 ReactDOM.render(<HelloComponent/>,document.getElementById('app'));
 
 if(module.hot){
