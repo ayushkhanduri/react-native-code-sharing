@@ -20,7 +20,14 @@ let webpackDevConfig = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             mode: JSON.stringify('web')
-        })
+        }),
+        new webpack.NormalModuleReplacementPlugin(
+            /(.*)_PLATFORM(\.*)/,
+            function(resource){
+              resource.request = resource.request
+                .replace(/_PLATFORM/, `${process.env.PLATFORM}`);
+            }
+        )
     ],
     module:{
         loaders: [

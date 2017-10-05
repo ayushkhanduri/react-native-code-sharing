@@ -1,15 +1,14 @@
 import React from 'react';
 
-let RequireWrapper = require('./wrappers/RequireWrapper').default;
+import HelloUI from '../native/components/HelloUI.component.js'
 
-let HelloUI = RequireWrapper('HelloUI');
-//let HelloUI = require(Re);
 
 export default class HelloComponent extends React.Component{
     constructor(){
         super();
+        console.log(global);
         this.state = {
-            someVar: "Hello dsdrld!"
+            someVar: "Hello dsasdasddrld!"
         };
     }
     render(){
